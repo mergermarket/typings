@@ -6,7 +6,7 @@ declare module "connect-datadog" {
 
   namespace createLogger {
     interface DatadogLoggerOptions {
-      dogstatsd?: statsd.Client;
+      dogstatsd?: statsd.StatsD;
       response_code?: boolean;
       stat?: string;
       tags?: string[];
