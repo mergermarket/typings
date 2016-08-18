@@ -1,6 +1,6 @@
 declare module "atlassian-crowd" {
   namespace AtlassianCrowd {
-    interface IOptions {
+    export interface IOptions {
       application: {
         name: string;
         password: string;
