@@ -1,6 +1,6 @@
 declare module "atlassian-crowd" {
   namespace AtlassianCrowd {
-    export interface IOptions {
+    interface IOptions {
       application: {
         name: string;
         password: string;
@@ -11,6 +11,8 @@ declare module "atlassian-crowd" {
       port?: number | string;
     }
   }
+
+  export interface IOptions extends AtlassianCrowd.IOptions {}
 
   export class AtlassianCrowd {
     constructor(options: AtlassianCrowd.IOptions);
