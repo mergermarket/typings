@@ -1,4 +1,4 @@
-declare module "atlasian-crowd" {
+declare module "atlassian-crowd" {
   namespace AtlassianCrowd {
     interface IOptions {
       application: {
