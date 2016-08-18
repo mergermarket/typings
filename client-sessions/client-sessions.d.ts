@@ -24,5 +24,5 @@ declare module "client-sessions" {
     }
   }
 
-  function clientSessionFactory(opts: ClientSessions.IOptions): express.RequestHandler;
+  export default function clientSessionFactory(opts: ClientSessions.IOptions): express.RequestHandler;
 }
