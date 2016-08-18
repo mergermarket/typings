@@ -1,7 +1,7 @@
 declare module "client-sessions" {
   import * as express from "express";
 
-  namespace clientsessions {
+  namespace ClientSessions {
     interface ICookie {
       ephemeral?: boolean;
       httpOnly?: boolean;
@@ -11,18 +11,18 @@ declare module "client-sessions" {
     }
 
     interface IOptions {
-      secret?: string;
-      encryptionKey?: Buffer;
-      signatureKey?: Buffer;
+      activeDuration?: number;
+      cookie?: ClientSessions.ICookie;
       cookieName?: string;
       duration?: number;
-      activeDuration?: number;
       encryptionAlgorithm?: string;
-      signatureAlgorithm?: string;
-      cookie?: clientsessions.ICookie;
+      encryptionKey?: Buffer;
       requestKey?: string;
+      secret?: string;
+      signatureAlgorithm?: string;
+      signatureKey?: Buffer;
     }
   }
 
-  function clientSessionFactory(opts: clientsessions.IOptions): express.RequestHandler;
+  function clientSessionFactory(opts: ClientSessions.IOptions): express.RequestHandler;
 }
