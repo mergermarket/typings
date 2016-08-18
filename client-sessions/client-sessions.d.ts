@@ -12,8 +12,8 @@ declare module "client-sessions" {
 
     interface IOptions {
       secret?: string;
-      encryptionKey?: NodeJS.Buffer;
-      signatureKey?: NodeJS.Buffer;
+      encryptionKey?: Buffer;
+      signatureKey?: Buffer;
       cookieName?: string;
       duration?: number;
       activeDuration?: number;
