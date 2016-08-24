@@ -12,7 +12,7 @@ declare module "node-statsd" {
     global_tags?: string[];
   }
 
-  export interface IDummyStatsObject {
+  export interface IDummyStatsObject extends IStatsdOptions {
     trackHttpResponseTime(
       responseTime: number,
       httpCallee: string,
