@@ -28,7 +28,7 @@ declare module "atlassian-crowd" {
       remove(username: string, callback: Function): void;
     };
     groups: {
-      active(group: string, callback: Function);
+      active(group: string, callback: Function): void;
       addmember(username: string, group: string, callback: Function): void
       create(name: string, description: string, callback: Function): void;
       directmembers(group: string, callback: Function): void
