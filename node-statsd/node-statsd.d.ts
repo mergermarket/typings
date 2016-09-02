@@ -3,7 +3,7 @@
 declare module "node-statsd" {
   export interface IStatsdOptions {
     host: string;
-    port: string | number;
+    port?: string | number;
     prefix?: string;
     suffix?: string;
     globalise?: boolean;
@@ -12,7 +12,7 @@ declare module "node-statsd" {
     global_tags?: string[];
   }
 
-  export interface IDummyStatsObject {
+  export interface IDummyStatsObject extends IStatsdOptions {
     trackHttpResponseTime(
       responseTime: number,
       httpCallee: string,
@@ -40,15 +40,6 @@ declare module "node-statsd" {
   }
 
   export default class StatsD {
-    host: string;
-    port: string | number;
-    prefix: string;
-    suffix: string;
-    globalise: boolean;
-    cacheDns: boolean;
-    mock: boolean;
-    global_tags: string[];
-
     constructor(
       host: IStatsdOptions | string,
       port?: string | number,
