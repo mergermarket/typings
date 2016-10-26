@@ -1,0 +1,33 @@
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Typescript typings
+typings/*
+!typings/custom
+
+# NPM
+.npmrc
+
+
+### Operating Systems stuff ###
+
+# OSX
+.DS_Store
+*.DS_Store
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+
+### IDE stuff ###
+
+# IDEA
+.idea
+
+# Code IDE
+.vscode/.browse.*
+.vscode
