@@ -29,4 +29,5 @@ typings/*
 .idea
 
 # Code IDE
-.vscode
+.vscode/*
+!.vscode/settings.json
