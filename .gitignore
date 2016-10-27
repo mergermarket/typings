@@ -29,5 +29,4 @@ typings/*
 .idea
 
 # Code IDE
-.vscode/.browse.*
 .vscode
